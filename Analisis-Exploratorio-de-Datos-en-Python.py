@@ -33,7 +33,7 @@
 
 # ### 1.1 Imports
 
-# In[4]:
+# In[1]:
 
 
 import pandas as pd
@@ -45,7 +45,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # ### 1.2 Ajustes iniciales
 
-# In[6]:
+# In[2]:
 
 
 # Comenta esta linea si tus visualizaciones no se ven
@@ -61,7 +61,7 @@ sns.set(style="whitegrid")
 
 # ### 2.1 Lectura de datos
 
-# In[7]:
+# In[3]:
 
 
 df = pd.read_csv('Iris.csv')
@@ -70,7 +70,7 @@ df
 
 # ### 2.2 Preprocesamiento
 
-# In[8]:
+# In[4]:
 
 
 #Renombramos las variables para falicitar su uso
@@ -84,7 +84,7 @@ df.rename({'SepalLengthCm':'sep_l',
 
 # ## 3. Limpieza de Datos
 
-# In[9]:
+# In[5]:
 
 
 df.drop('Id', axis=1, inplace=True)
@@ -93,7 +93,7 @@ df.head(7)
 
 # ## 4. Análisis Descriptivo
 
-# In[10]:
+# In[6]:
 
 
 df.head(8)
@@ -101,7 +101,7 @@ df.head(8)
 
 # #### Dimensiones del Dataset
 
-# In[11]:
+# In[7]:
 
 
 df.shape
@@ -109,13 +109,13 @@ df.shape
 
 # #### Información General del Dataset
 
-# In[18]:
+# In[8]:
 
 
 df.info()
 
 
-# In[19]:
+# In[9]:
 
 
 df.describe()
@@ -123,20 +123,20 @@ df.describe()
 
 # #### Recuento de la variable a predecir
 
-# In[14]:
+# In[10]:
 
 
 df['especie'].value_counts()
 
 
-# In[15]:
+# In[11]:
 
 
 couns = df['especie'].value_counts()
 sns.countplot (data= df, x='especie', palette='pastel')
 
 
-# In[16]:
+# In[12]:
 
 
 # Crear el gráfico de barras
@@ -152,7 +152,7 @@ plt.show()
 
 # ### Comprobamos las variables nulas
 
-# In[17]:
+# In[13]:
 
 
 df.isnull().sum(axis=0)
@@ -162,7 +162,7 @@ df.isnull().sum(axis=0)
 
 # ### 5.1 Longitud del Sépalo
 
-# In[19]:
+# In[14]:
 
 
 # 1. Histograma con KDE
@@ -194,7 +194,7 @@ plt.show()
 
 # ### 5.2 Ancho del Sépalo
 
-# In[20]:
+# In[15]:
 
 
 # 1. Histograma con KDE
@@ -226,7 +226,7 @@ plt.show()
 
 # ### 5.3 Longitud del pétalo
 
-# In[21]:
+# In[16]:
 
 
 # 1. Histograma con KDE
@@ -258,7 +258,7 @@ plt.show()
 
 # ### 5.4 Ancho del pétalo
 
-# In[22]:
+# In[17]:
 
 
 # 1. Histograma con KDE
@@ -292,7 +292,7 @@ plt.show()
 
 # ### 6.1 Longitud de Sépalo y Especie
 
-# In[23]:
+# In[18]:
 
 
 # Crear una figura con una cuadrícula de 2x2 subgráficos
@@ -328,10 +328,9 @@ plt.tight_layout()
 plt.show()
 
 
-
 # ### 6.2 Longitud de Sépalo y Especie
 
-# In[24]:
+# In[19]:
 
 
 # Crear una figura con una cuadrícula de 2x2 subgráficos
@@ -367,25 +366,26 @@ plt.tight_layout()
 plt.show()
 
 
-
 # ### 6.3 Relación entre todas las variables
 
-# In[25]:
+# In[20]:
 
 
-# 1. Pairplot: muestra la relación entre todas las variables
-b
+# Pairplot: muestra la relación entre todas las variables
+sns.pairplot(df, hue='especie', markers=["o", "s", "D"], palette="Set1")
+plt.suptitle('Pairplot de las variables de Iris', y=1.02)
+plt.show()
 
 
 # ### 6.4 Correlacion entre variables
 
-# In[57]:
+# In[21]:
 
 
 df.corr()
 
 
-# In[56]:
+# In[22]:
 
 
 # 2. Heatmap de la correlación entre variables
@@ -398,7 +398,7 @@ plt.show()
 
 # ### 6.5 Relación entre 3 variables
 
-# In[59]:
+# In[23]:
 
 
 # 3. Scatterplot 3D: mostrar la relación entre 3 variables

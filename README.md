@@ -12,9 +12,9 @@ En este video, cubro todo el proceso desde la carga del dataset hasta la visuali
 
 ## Contenido del repositorio
 
-- **`EDA_Iris.ipynb`**: Un Jupyter Notebook con el análisis exploratorio de datos del dataset Iris.
-- **`EDA_Iris.py`**: Un script en Python que realiza el mismo análisis que el notebook.
-- **`iris.csv`**: El dataset Iris utilizado para el análisis.
+- **`Analisis-Exploratorio-de-Datos-en-Python.ipynb`**: Un Jupyter Notebook con el análisis exploratorio de datos del dataset Iris.
+- **`Analisis-Exploratorio-de-Datos-en-Python.py`**: Un script en Python que realiza el mismo análisis que el notebook.
+- **`Iris.csv`**: El dataset Iris utilizado para el análisis.
 
 ## ¿Cómo usar este repositorio?
 

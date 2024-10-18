@@ -1,0 +1,12 @@
+# Ignorar checkpoints de Jupyter
+.ipynb_checkpoints/
+
+# Ignorar archivos de Python compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db

@@ -20,7 +20,7 @@ En este video, cubro todo el proceso desde la carga del dataset hasta la visuali
 
 1. Clona el repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/tu-usuario/EDA-Iris.git
    
 2. Asegúrate de tener instaladas las dependencias necesarias:
    ```bash
